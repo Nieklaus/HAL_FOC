@@ -45,3 +45,7 @@ void PID_init(void)    //Motor_init()函数已经对limit初始化，此处无�
 	PID_Current_d.timestamp_prev=0;
 }
 
+void sj(void)
+{
+    
+}
