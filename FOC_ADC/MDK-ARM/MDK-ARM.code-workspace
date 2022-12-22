@@ -1,0 +1,16 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "pid_motor.h": "c",
+            "base_motor_control.h": "c",
+            "inlinecurrentsense.h": "c",
+            "inline_adc.h": "c"
+        }
+    },
+    "extensions": {}
+}
