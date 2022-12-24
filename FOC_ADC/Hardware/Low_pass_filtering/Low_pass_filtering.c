@@ -17,4 +17,7 @@ void LPF_init(void)
 	LPF_velocity.timestamp_prev=0;
 }
 
+float LPF_Operator(LowPassFilter* LPF,float x)                    //这里的x为一阶低通滤波公式中的x
+{
 
+}

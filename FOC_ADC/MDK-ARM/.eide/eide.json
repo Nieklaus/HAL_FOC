@@ -10,6 +10,11 @@
     "files": [],
     "folders": [
       {
+        "name": "::CMSIS",
+        "files": [],
+        "folders": []
+      },
+      {
         "name": "Application",
         "files": [],
         "folders": [
@@ -148,10 +153,10 @@
         "name": "Hardware",
         "files": [
           {
-            "path": "../Hardware/Usrt/Usrt.c"
+            "path": "../Hardware/delay/delay_JR.c"
           },
           {
-            "path": "../Hardware/delay/delay_JR.c"
+            "path": "../Hardware/Usrt/Usrt.c"
           }
         ],
         "folders": []
@@ -160,38 +165,33 @@
         "name": "Simple FOC",
         "files": [
           {
-            "path": "../Hardware/InlineCurrentSense/InlineCurrentSense.c"
-          },
-          {
             "path": "../Hardware/_ReadADC/Inline_ADC.c"
           },
           {
-            "path": "../Hardware/FOC_Define/FOC_Define.c"
-          },
-          {
-            "path": "../Hardware/CurrentSense/CurrentSense.c"
+            "path": "../Hardware/AS5600/AS5600.c"
           },
           {
             "path": "../Hardware/Base_Motor_Control/Base_Motor_Control.c"
           },
           {
+            "path": "../Hardware/CurrentSense/CurrentSense.c"
+          },
+          {
+            "path": "../Hardware/FOC_Define/FOC_Define.c"
+          },
+          {
             "path": "../Hardware/FOC_Motor/FOC_Motor.c"
+          },
+          {
+            "path": "../Hardware/InlineCurrentSense/InlineCurrentSense.c"
           },
           {
             "path": "../Hardware/Low_pass_filtering/Low_pass_filtering.c"
           },
           {
             "path": "../Hardware/PID_Motor/PID_Motor.c"
-          },
-          {
-            "path": "../Hardware/AS5600/AS5600.c"
           }
         ],
-        "folders": []
-      },
-      {
-        "name": "::CMSIS",
-        "files": [],
         "folders": []
       }
     ]
@@ -346,8 +346,6 @@
       },
       "custom_dep": {
         "name": "default",
-        "sourceDirList": [],
-        "libList": [],
         "incList": [
           "../Core/Inc",
           "../Drivers/STM32F4xx_HAL_Driver/Inc",
@@ -367,6 +365,8 @@
           "../Hardware/AS5600",
           "RTE/_FOC_ADC"
         ],
+        "libList": [],
+        "sourceDirList": [],
         "defineList": [
           "USE_HAL_DRIVER",
           "STM32F407xx"
