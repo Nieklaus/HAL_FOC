@@ -1,6 +1,8 @@
 #ifndef __Low_pass_filtering_H__
 #define __Low_pass_filtering_H__
 
+#include "main.h"
+
 typedef struct 
 {
 	float Tf; 						//低通滤波时间常数

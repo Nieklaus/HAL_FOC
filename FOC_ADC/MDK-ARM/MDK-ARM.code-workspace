@@ -6,7 +6,8 @@
     ],
     "settings": {
         "files.associations": {
-            "inlinecurrentsense.h": "c"
+            "inlinecurrentsense.h": "c",
+            "low_pass_filtering.h": "c"
         }
     },
     "extensions": {}

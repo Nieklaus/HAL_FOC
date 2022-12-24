@@ -17,7 +17,30 @@ void LPF_init(void)
 	LPF_velocity.timestamp_prev=0;
 }
 
-float LPF_Operator(LowPassFilter* LPF,float x)                    //这里的x为一阶低通滤波公式中的x
+float LPF_Operator(LowPassFilter* LPF,float X)                    //这里的x为一阶低通滤波公式中的x
 {
+	unsigned long Now_us;
+	float Dt,alpha,Y;
 
+	Now_us = SysTick->VAL;//递减
+	if(Now_us < LPF->timestamp_prev) //timestamp_prev 为上次的计算时的滴答定时器的值
+	{
+		Dt = (float)(LPF->timestamp_prev - Now_us) / 168 * 1e-6f; //计算上次滤波时和现在此次计算的时间差值来决定时间常数滤波程度
+	}
+	else
+	{
+		Dt = (float)(0xFFFFFF - Now_us + LPF->timestamp_prev) / 168 * 1e-6f;//由于是递减的滴答定时器所以时间越久0xFFFFFF - now_us的数值越大
+	}
+	LPF->timestamp_prev = Now_us; //保存滴答定时器的值
+	if(Dt > 0.3f)   //时间过长，大概是程序刚启动初始化，直接返回
+	{
+		LPF->y_prev = X;         
+		return X;
+	}
+	alpha = LPF->Tf/(LPF->Tf + Dt);      //滤波系数 时间过久则要求不要突变平稳一些
+
+	Y = alpha * X + (1.0f - alpha) * LPF->y_prev;
+	LPF->y_prev = Y;
+
+	return Y;
 }
