@@ -29,11 +29,14 @@ foc_adc\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
 foc_adc\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 foc_adc\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 foc_adc\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+foc_adc\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+foc_adc\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 foc_adc\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 foc_adc\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 foc_adc\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 foc_adc\main.o: ../Core/Inc/adc.h
 foc_adc\main.o: ../Core/Inc/dma.h
+foc_adc\main.o: ../Core/Inc/i2c.h
 foc_adc\main.o: ../Core/Inc/usart.h
 foc_adc\main.o: ../Core/Inc/gpio.h
 foc_adc\main.o: ../Hardware/delay/delay_JR.h

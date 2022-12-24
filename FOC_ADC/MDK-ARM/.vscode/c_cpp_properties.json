@@ -18,6 +18,7 @@
                 "e:\\FOC_ADC\\FOC_ADC\\Hardware\\FOC_Motor",
                 "e:\\FOC_ADC\\FOC_ADC\\Hardware\\Low_pass_filtering",
                 "e:\\FOC_ADC\\FOC_ADC\\Hardware\\PID_Motor",
+                "e:\\FOC_ADC\\FOC_ADC\\Hardware\\AS5600",
                 "e:\\FOC_ADC\\FOC_ADC\\MDK-ARM",
                 "e:\\FOC_ADC\\FOC_ADC\\Core\\Src",
                 "e:\\FOC_ADC\\FOC_ADC\\Drivers\\STM32F4xx_HAL_Driver\\Src"

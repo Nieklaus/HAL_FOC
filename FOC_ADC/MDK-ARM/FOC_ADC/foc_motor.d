@@ -1,6 +1,7 @@
 foc_adc\foc_motor.o: ..\Hardware\FOC_Motor\FOC_Motor.c
 foc_adc\foc_motor.o: ..\Hardware\FOC_Motor\FOC_Motor.h
 foc_adc\foc_motor.o: D:\special program\keil ARM\ARM\ARMCC\Bin\..\include\stdio.h
+foc_adc\foc_motor.o: ../Hardware/PID_Motor/PID_Motor.h
 foc_adc\foc_motor.o: ../Hardware/Base_Motor_Control/Base_Motor_Control.h
 foc_adc\foc_motor.o: ../Core/Inc/main.h
 foc_adc\foc_motor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
@@ -32,6 +33,8 @@ foc_adc\foc_motor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
 foc_adc\foc_motor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 foc_adc\foc_motor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 foc_adc\foc_motor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+foc_adc\foc_motor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+foc_adc\foc_motor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 foc_adc\foc_motor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 foc_adc\foc_motor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 foc_adc\foc_motor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
