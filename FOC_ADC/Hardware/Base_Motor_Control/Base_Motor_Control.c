@@ -11,3 +11,8 @@ void Base_parameter_init(void)
 	Motor_init.velocity_limit=20;         //rad/s 角度模式时限制最大转速，力矩模式和速度模式不起作用
 	Motor_init.current_limit=50;          //A，foc_current和dc_current模式限制电流，不能为0。速度模式和位置模式起作用
 }
+
+void sj()
+{
+	
+}
