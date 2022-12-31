@@ -109,7 +109,7 @@ int main(void)
   LPF_init();                //LPF参数初始化
   PID_init();                //PID参数初始化
   Base_parameter_init();
-  Controller = Type_velocity_openloop;
+  Controller = Type_angle_openloop;
 
   Motor_Init();
   /* USER CODE END 2 */
