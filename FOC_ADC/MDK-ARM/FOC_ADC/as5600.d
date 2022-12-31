@@ -34,6 +34,8 @@ foc_adc\as5600.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
 foc_adc\as5600.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 foc_adc\as5600.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 foc_adc\as5600.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+foc_adc\as5600.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+foc_adc\as5600.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 foc_adc\as5600.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 foc_adc\as5600.o: ../Core/Inc/i2c.h
 foc_adc\as5600.o: ../Hardware/delay/delay_JR.h
@@ -45,3 +47,4 @@ foc_adc\as5600.o: ../Core/Inc/adc.h
 foc_adc\as5600.o: ../Core/Inc/dma.h
 foc_adc\as5600.o: D:\special program\keil ARM\ARM\ARMCC\Bin\..\include\stdio.h
 foc_adc\as5600.o: ../Hardware/FOC_Define/FOC_Define.h
+foc_adc\as5600.o: D:\special program\keil ARM\ARM\ARMCC\Bin\..\include\math.h

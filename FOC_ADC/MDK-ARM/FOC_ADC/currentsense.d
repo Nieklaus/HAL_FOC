@@ -34,8 +34,11 @@ foc_adc\currentsense.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
 foc_adc\currentsense.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 foc_adc\currentsense.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 foc_adc\currentsense.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+foc_adc\currentsense.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+foc_adc\currentsense.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 foc_adc\currentsense.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 foc_adc\currentsense.o: ../Hardware/FOC_Define/FOC_Define.h
+foc_adc\currentsense.o: D:\special program\keil ARM\ARM\ARMCC\Bin\..\include\math.h
 foc_adc\currentsense.o: ../Hardware/InlineCurrentSense/InlineCurrentSense.h
 foc_adc\currentsense.o: ../Hardware/delay/delay_JR.h
 foc_adc\currentsense.o: ../Drivers/CMSIS/Include/core_cm4.h
@@ -44,3 +47,6 @@ foc_adc\currentsense.o: ../Hardware/_ReadADC/Inline_ADC.h
 foc_adc\currentsense.o: ../Core/Inc/adc.h
 foc_adc\currentsense.o: ../Core/Inc/dma.h
 foc_adc\currentsense.o: D:\special program\keil ARM\ARM\ARMCC\Bin\..\include\stdio.h
+foc_adc\currentsense.o: ../DSP_Lib/Include/arm_math.h
+foc_adc\currentsense.o: ../DSP_Lib/Include/core_cm4.h
+foc_adc\currentsense.o: D:\special program\keil ARM\ARM\ARMCC\Bin\..\include\string.h

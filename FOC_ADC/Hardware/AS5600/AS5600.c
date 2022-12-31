@@ -5,9 +5,9 @@
 #define abs(x) ((x)>0?(x):-(x))
 
 float angle_prev;
-static float angle_data_prev; //ÉÏ´ÎÎ»ÖÃ
-static float full_rotation_offset; //×ª¹ýµÄÕûÈ¦Êý
-unsigned long velocity_calc_timestamp; //¼ÆËãËÙ¶ÈÊ±¼ä²ÉÑù
+static float angle_data_prev; //ä¸Šæ¬¡ä½ç½®
+static float full_rotation_offset; //è½¬è¿‡çš„æ•´åœˆæ•°
+unsigned long velocity_calc_timestamp; //è®¡ç®—é€Ÿåº¦æ—¶é—´é‡‡æ ·
 
 static int IIC_Write(uint8_t Addr,uint8_t *pData,uint32_t count)
 {
@@ -27,7 +27,7 @@ static int IIC_Read(uint8_t Addr,uint8_t *pData,uint32_t count)
 	return status;
 }
 
-uint16_t AS5600_Get_Raw_Angle(void)          //Ö±½Ó¶ÁÈ¡¼Ä´æÆ÷µÄÎ´¾­´¦Àí
+uint16_t AS5600_Get_Raw_Angle(void)      //ç›´æŽ¥è¯»å–å¯„å­˜å™¨çš„æœªç»å¤„ç†
 {
 	uint16_t Raw_angle;
 	uint8_t Buffer[2] = {0};
@@ -68,8 +68,8 @@ float Get_Velocity(void)
 		Sample_time = (float)(velocity_calc_timestamp - Now_us) / 168 * 1e-6f;
 	}
 	else
-		Sample_time = (float)(0xFFFFFF - Now_us + velocity_calc_timestamp) / 168 * 1e-6f;            //¼òµ¥À´Ëµ¾ÍÊÇ¿´¿´¹ýÁË¶à¾Ã
-	if(Sample_time == 0 || Sample_time > 0.5f) Sample_time = 1e-3f;                                   //½â¾öÆæ¹ÖÒç³ö
+		Sample_time = (float)(0xFFFFFF - Now_us + velocity_calc_timestamp) / 168 * 1e-6f;            //ç®€å•æ¥è¯´å°±æ˜¯çœ‹çœ‹è¿‡äº†å¤šä¹…
+	if(Sample_time == 0 || Sample_time > 0.5f) Sample_time = 1e-3f;                                    //è§£å†³å¥‡æ€ªæº¢å‡º
 	
 	printf("Smtime = %f\r\n",Sample_time);
 	Angle_now = AS5600_Get_Angle();

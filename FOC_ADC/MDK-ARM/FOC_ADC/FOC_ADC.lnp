@@ -5,6 +5,7 @@
 "foc_adc\adc.o"
 "foc_adc\dma.o"
 "foc_adc\i2c.o"
+"foc_adc\tim.o"
 "foc_adc\usart.o"
 "foc_adc\stm32f4xx_it.o"
 "foc_adc\stm32f4xx_hal_msp.o"
@@ -41,6 +42,7 @@
 "foc_adc\low_pass_filtering.o"
 "foc_adc\pid_motor.o"
 "foc_adc\as5600.o"
+"..\DSP_Lib\arm_cortexM4lf_math.lib"
 --library_type=microlib --strict --scatter "FOC_ADC\FOC_ADC.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

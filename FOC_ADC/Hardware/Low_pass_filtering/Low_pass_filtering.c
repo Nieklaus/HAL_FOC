@@ -39,8 +39,8 @@ float LPF_Operator(LowPassFilter* LPF,float X)                    //这里的x�
 	}
 	alpha = LPF->Tf/(LPF->Tf + Dt);      //滤波系数 时间过久则要求不要突变平稳一些
 
-	Y = alpha * X + (1.0f - alpha) * LPF->y_prev;
-	LPF->y_prev = Y;
+	Y = alpha * LPF->y_prev + (1.0f - alpha) * X;       //这个公式看起来自变量和上次变量反过来了但是在simple foc官网中的计算推导的LPF公式确实是反过来的
+	LPF->y_prev = Y;									//如果实在介意可以通过改变PID的参数让公式达到应该的效果(即高时间常数的状态)
 
 	return Y;
 }

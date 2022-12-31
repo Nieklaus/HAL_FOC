@@ -19,6 +19,8 @@
                 "e:\\FOC_ADC\\FOC_ADC\\Hardware\\Low_pass_filtering",
                 "e:\\FOC_ADC\\FOC_ADC\\Hardware\\PID_Motor",
                 "e:\\FOC_ADC\\FOC_ADC\\Hardware\\AS5600",
+                "e:\\FOC_ADC\\FOC_ADC\\DSP_Lib\\Include",
+                "e:\\FOC_ADC\\FOC_ADC\\DSP_Lib",
                 "e:\\FOC_ADC\\FOC_ADC\\MDK-ARM",
                 "e:\\FOC_ADC\\FOC_ADC\\Core\\Src",
                 "e:\\FOC_ADC\\FOC_ADC\\Drivers\\STM32F4xx_HAL_Driver\\Src"
@@ -26,7 +28,11 @@
             "defines": [
                 "USE_HAL_DRIVER",
                 "STM32F407xx",
+                "__TARGET_FPU_VFP",
                 "__CC_ARM",
+                "ARM_MATH_CM4",
+                "ARM_MATH_MATRIX_CHECK",
+                "ARM_MATH_ROUNDING",
                 "__arm__",
                 "__align(x)=",
                 "__ALIGNOF__(x)=",

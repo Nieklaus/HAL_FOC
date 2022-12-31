@@ -8,9 +8,11 @@
 
 #define AS5600_AGREEMENT_MODE 0
 /*
-		0ÎªÓ²¼þIIC
-		1ÎªÈí¼þIIC
+		0ÎªÓ²ï¿½ï¿½IIC
+		1Îªï¿½ï¿½ï¿½ï¿½IIC
 */
+
+extern float angle_prev;
 
 #if AS5600_AGREEMENT_MODE == 0
 
@@ -66,16 +68,16 @@ float Get_Velocity(void);
 #define GPIOJ_IDR_Addr    (GPIOJ_BASE+16) //0x40022410 
 #define GPIOK_IDR_Addr    (GPIOK_BASE+16) //0x40022810 
 
-#define PBout(n)   BIT_ADDR(GPIOB_ODR_Addr,n)  //Êä³ö 
-#define PBin(n)    BIT_ADDR(GPIOB_IDR_Addr,n)  //ÊäÈë 
+#define PBout(n)   BIT_ADDR(GPIOB_ODR_Addr,n)  //ï¿½ï¿½ï¿½ 
+#define PBin(n)    BIT_ADDR(GPIOB_IDR_Addr,n)  //ï¿½ï¿½ï¿½ï¿½ 
 
-#define SDA_IN()  {GPIOB->MODER&=~(3<<(5*2));GPIOB->MODER|=0<<5*2;}	//PH5ÊäÈëÄ£Ê½
-#define SDA_OUT() {GPIOB->MODER&=~(3<<(5*2));GPIOB->MODER|=1<<5*2;} //PH5Êä³öÄ£Ê½
+#define SDA_IN()  {GPIOB->MODER&=~(3<<(5*2));GPIOB->MODER|=0<<5*2;}	//PH5ï¿½ï¿½ï¿½ï¿½Ä£Ê½
+#define SDA_OUT() {GPIOB->MODER&=~(3<<(5*2));GPIOB->MODER|=1<<5*2;} //PH5ï¿½ï¿½ï¿½Ä£Ê½
  
-//IO²Ù×÷º¯Êý	 
-#define IIC_SCL    PBout(4) //SCLÊä³ö
-#define IIC_SDA    PBout(5) //SDAÊä³ö	 
-#define READ_SDA   PBin(5)  //SDAÊäÈë
+//IOï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	 
+#define IIC_SCL    PBout(4) //SCLï¿½ï¿½ï¿½
+#define IIC_SDA    PBout(5) //SDAï¿½ï¿½ï¿½	 
+#define READ_SDA   PBin(5)  //SDAï¿½ï¿½ï¿½ï¿½
  
 #define	_raw_ang_hi 0x0c
 #define	_raw_ang_lo 0x0d

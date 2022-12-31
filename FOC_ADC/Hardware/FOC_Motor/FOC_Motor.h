@@ -4,6 +4,13 @@
 #include "stdio.h"
 #include "PID_Motor.h"
 #include "Base_Motor_Control.h"
+#include "FOC_Define.h"
+#include "arm_math.h"
+#include "delay_JR.h"
+#include "tim.h"
+#include "AS5600.h"
+#include "Low_pass_filtering.h"
+#include "CurrentSense.h"
 
 typedef enum
 {
@@ -21,7 +28,10 @@ typedef enum
 	Type_angle_openloop      //位置开环控制
 } MotionControlType;
 
-extern Motor_Base Motor_init;
+extern MotionControlType Controller;
+
+void Motor_Init(void);
+void Move(float New_Target);
 
 #endif
 

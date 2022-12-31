@@ -21,12 +21,15 @@
 #include "adc.h"
 #include "dma.h"
 #include "i2c.h"
+#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "delay_JR.h"
+#include "Base_Motor_Control.h"
+#include "FOC_Motor.h"
 #include "InlineCurrentSense.h"
 #include "Inline_ADC.h"
 /* USER CODE END Includes */
@@ -48,7 +51,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+float Target = 3.0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -94,18 +97,28 @@ int main(void)
   MX_ADC1_Init();
   MX_USART1_UART_Init();
   MX_I2C1_Init();
+  MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
   delay_init(168);
+  HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_2);
+  HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_3);
+  
+//  delay_ms(1000);
+
+  LPF_init();                //LPF参数初始化
+  PID_init();                //PID参数初始化
+  Base_parameter_init();
+  Controller = Type_velocity_openloop;
+
+  Motor_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  HAL_GPIO_WritePin(GPIOE,GPIO_PIN_1,GPIO_PIN_RESET);
-	  delay_us(1);
-	  HAL_GPIO_WritePin(GPIOE,GPIO_PIN_1,GPIO_PIN_SET);
-	  delay_us(1);
+    Move(Target);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

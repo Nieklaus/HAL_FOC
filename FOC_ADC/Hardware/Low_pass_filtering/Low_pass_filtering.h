@@ -10,5 +10,10 @@ typedef struct
 	unsigned long timestamp_prev;   //上一次执行的时间常数
 } LowPassFilter;
 
+extern LowPassFilter LPF_current_q,LPF_current_d,LPF_velocity;
+
+void LPF_init(void);
+float LPF_Operator(LowPassFilter* LPF,float X);
+
 #endif
 

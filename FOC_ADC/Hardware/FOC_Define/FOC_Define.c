@@ -44,3 +44,31 @@ float _cos(float a){
   return _sin(a_sin);
 }
 
+// 电气角度计算
+float _electricalAngle(float shaft_angle, int pole_pairs) {
+  return (shaft_angle * pole_pairs);
+}
+
+// 把角度归一化到0-2PI的范围内
+float _normalizeAngle(float angle){
+  float a = fmod(angle, _2PI);
+  return a >= 0 ? a : (a + _2PI);
+}
+
+// 平方根逼近函数
+// https://reprap.org/forum/read.php?147,219210
+// https://en.wikipedia.org/wiki/Fast_inverse_square_root
+float _sqrtApprox(float number) {//low in fat
+  long i;
+  float y;
+  // float x;
+  // const float f = 1.5F; // better precision
+
+  // x = number * 0.5F;
+  y = number;
+  i = * ( long * ) &y;
+  i = 0x5f375a86 - ( i >> 1 );
+  y = * ( float * ) &i; 
+  // y = y * ( f - ( x * y * y ) ); // better precision
+  return number * y;
+}

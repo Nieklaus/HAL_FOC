@@ -10,11 +10,6 @@
     "files": [],
     "folders": [
       {
-        "name": "::CMSIS",
-        "files": [],
-        "folders": []
-      },
-      {
         "name": "Application",
         "files": [],
         "folders": [
@@ -48,6 +43,9 @@
                   },
                   {
                     "path": "../Core/Src/i2c.c"
+                  },
+                  {
+                    "path": "../Core/Src/tim.c"
                   },
                   {
                     "path": "../Core/Src/usart.c"
@@ -153,10 +151,10 @@
         "name": "Hardware",
         "files": [
           {
-            "path": "../Hardware/delay/delay_JR.c"
+            "path": "../Hardware/Usrt/Usrt.c"
           },
           {
-            "path": "../Hardware/Usrt/Usrt.c"
+            "path": "../Hardware/delay/delay_JR.c"
           }
         ],
         "folders": []
@@ -165,33 +163,47 @@
         "name": "Simple FOC",
         "files": [
           {
+            "path": "../Hardware/InlineCurrentSense/InlineCurrentSense.c"
+          },
+          {
             "path": "../Hardware/_ReadADC/Inline_ADC.c"
-          },
-          {
-            "path": "../Hardware/AS5600/AS5600.c"
-          },
-          {
-            "path": "../Hardware/Base_Motor_Control/Base_Motor_Control.c"
-          },
-          {
-            "path": "../Hardware/CurrentSense/CurrentSense.c"
           },
           {
             "path": "../Hardware/FOC_Define/FOC_Define.c"
           },
           {
-            "path": "../Hardware/FOC_Motor/FOC_Motor.c"
+            "path": "../Hardware/CurrentSense/CurrentSense.c"
           },
           {
-            "path": "../Hardware/InlineCurrentSense/InlineCurrentSense.c"
+            "path": "../Hardware/Base_Motor_Control/Base_Motor_Control.c"
+          },
+          {
+            "path": "../Hardware/FOC_Motor/FOC_Motor.c"
           },
           {
             "path": "../Hardware/Low_pass_filtering/Low_pass_filtering.c"
           },
           {
             "path": "../Hardware/PID_Motor/PID_Motor.c"
+          },
+          {
+            "path": "../Hardware/AS5600/AS5600.c"
           }
         ],
+        "folders": []
+      },
+      {
+        "name": "DSP_Lib",
+        "files": [
+          {
+            "path": "../DSP_Lib/arm_cortexM4lf_math.lib"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "::CMSIS",
+        "files": [],
         "folders": []
       }
     ]
@@ -363,13 +375,20 @@
           "../Hardware/Low_pass_filtering",
           "../Hardware/PID_Motor",
           "../Hardware/AS5600",
+          "../DSP_Lib/Include",
+          "../DSP_Lib",
           "RTE/_FOC_ADC"
         ],
         "libList": [],
         "sourceDirList": [],
         "defineList": [
           "USE_HAL_DRIVER",
-          "STM32F407xx"
+          "STM32F407xx",
+          "__TARGET_FPU_VFP",
+          "__CC_ARM",
+          "ARM_MATH_CM4",
+          "ARM_MATH_MATRIX_CHECK",
+          "ARM_MATH_ROUNDING"
         ]
       }
     }

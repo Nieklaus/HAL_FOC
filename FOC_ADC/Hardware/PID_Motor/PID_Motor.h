@@ -1,6 +1,9 @@
 #ifndef __PID_Motor_H__
 #define __PID_Motor_H__
 
+#include "main.h"
+#include "FOC_Define.h"
+
 typedef struct 
 {
     float P;         
@@ -15,5 +18,7 @@ typedef struct
 } PID_Controller;
 
 extern PID_Controller  PID_Current_q,PID_Current_d,PID_Velocity,PID_Angle;
+void PID_init(void);
+float PID_Operator(PID_Controller* PID,float error);
 
 #endif

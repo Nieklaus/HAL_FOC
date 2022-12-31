@@ -28,8 +28,8 @@ DQCurrent_s getFOCCurrents(float angle_el)
 	}
 	
 	// calculate park transform                    Park变化获取IQ和ID
-	ct = _cos(angle_el);
-	st = _sin(angle_el);
+	ct = arm_cos_f32(angle_el);
+	st = arm_sin_f32(angle_el);
 	ret.d = i_alpha * ct + i_beta * st;      
 	ret.q = i_beta * ct - i_alpha * st;
 	return ret;

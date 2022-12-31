@@ -2,7 +2,6 @@ foc_adc\foc_motor.o: ..\Hardware\FOC_Motor\FOC_Motor.c
 foc_adc\foc_motor.o: ..\Hardware\FOC_Motor\FOC_Motor.h
 foc_adc\foc_motor.o: D:\special program\keil ARM\ARM\ARMCC\Bin\..\include\stdio.h
 foc_adc\foc_motor.o: ../Hardware/PID_Motor/PID_Motor.h
-foc_adc\foc_motor.o: ../Hardware/Base_Motor_Control/Base_Motor_Control.h
 foc_adc\foc_motor.o: ../Core/Inc/main.h
 foc_adc\foc_motor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 foc_adc\foc_motor.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -37,4 +36,24 @@ foc_adc\foc_motor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
 foc_adc\foc_motor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 foc_adc\foc_motor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 foc_adc\foc_motor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+foc_adc\foc_motor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+foc_adc\foc_motor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 foc_adc\foc_motor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+foc_adc\foc_motor.o: ../Hardware/FOC_Define/FOC_Define.h
+foc_adc\foc_motor.o: D:\special program\keil ARM\ARM\ARMCC\Bin\..\include\math.h
+foc_adc\foc_motor.o: ../Hardware/Base_Motor_Control/Base_Motor_Control.h
+foc_adc\foc_motor.o: ../DSP_Lib/Include/arm_math.h
+foc_adc\foc_motor.o: ../DSP_Lib/Include/core_cm4.h
+foc_adc\foc_motor.o: D:\special program\keil ARM\ARM\ARMCC\Bin\..\include\string.h
+foc_adc\foc_motor.o: ../Hardware/delay/delay_JR.h
+foc_adc\foc_motor.o: ../Drivers/CMSIS/Include/core_cm4.h
+foc_adc\foc_motor.o: ../Hardware/InlineCurrentSense/InlineCurrentSense.h
+foc_adc\foc_motor.o: ../Hardware/delay/delay_JR.h
+foc_adc\foc_motor.o: ../Hardware/_ReadADC/Inline_ADC.h
+foc_adc\foc_motor.o: ../Core/Inc/adc.h
+foc_adc\foc_motor.o: ../Core/Inc/dma.h
+foc_adc\foc_motor.o: ../Core/Inc/tim.h
+foc_adc\foc_motor.o: ../Hardware/AS5600/AS5600.h
+foc_adc\foc_motor.o: ../Core/Inc/i2c.h
+foc_adc\foc_motor.o: ../Hardware/Low_pass_filtering/Low_pass_filtering.h
+foc_adc\foc_motor.o: ../Hardware/CurrentSense/CurrentSense.h

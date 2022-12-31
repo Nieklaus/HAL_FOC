@@ -4,6 +4,9 @@
 #include "main.h"
 #include "FOC_Define.h"
 #include "InlineCurrentSense.h"
+#include "arm_math.h"
+
+DQCurrent_s getFOCCurrents(float angle_el);
 
 #endif
 

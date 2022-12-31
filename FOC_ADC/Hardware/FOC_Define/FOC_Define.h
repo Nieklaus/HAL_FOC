@@ -1,12 +1,16 @@
 #ifndef __FOC_Define_H__
 #define __FOC_Define_H__
 
+#include "math.h"
+#include "main.h"
+
 //数学函数定义
 #define _sign(a) ( ( (a) < 0 )  ?  -1   : ( (a) > 0 ) )
 #define _round(x) ((x)>=0?(long)((x)+0.5f):(long)((x)-0.5f))
 #define _constrain(amt,low,high) ((amt)<(low)?(low):((amt)>(high)?(high):(amt)))
 #define _sqrt(a) (_sqrtApprox(a))
 #define Set_if(a) ( (a) != (NOT_SET) )
+
 
 //数学参数
 #define _2_SQRT3 1.15470053838f
@@ -30,6 +34,12 @@ typedef struct    //通过三相电流经过Clark变换和Park变换得到的IQ�
 	float q;
 } DQCurrent_s;
 
+typedef struct  //通过三相电流经过Clark变换和Park变换得到的VQ和VD
+{
+	float d;
+	float q;
+} DQVoltage_s;
+
 typedef struct    //通过电流环采样出来的三相电流
 {
 	float a;
@@ -39,5 +49,8 @@ typedef struct    //通过电流环采样出来的三相电流
 
 float _sin(float a);
 float _cos(float a);
+float _electricalAngle(float shaft_angle, int pole_pairs);
+float _normalizeAngle(float angle);
+float _sqrtApprox(float number);
 
 #endif
