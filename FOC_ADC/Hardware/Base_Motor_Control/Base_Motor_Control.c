@@ -14,5 +14,10 @@ void Base_parameter_init(void)
 
 void sj()
 {
+
+}
+
+void ss()
+{
 	
 }
